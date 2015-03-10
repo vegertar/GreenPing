@@ -1,2 +1,2 @@
-# greenping
-ping tools powered by greenlet
+# GreenPing
+ping tools powered by gevent greenlet
