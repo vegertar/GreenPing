@@ -712,7 +712,7 @@ def retrieve_cdnlist(domain, hostsconf, iplistfile, expire):
         except IOError:
             e = '''Could not load hostid from `%s`.
 Please run with specific hosts, such as below:
-    ping.py www.letv.com www.lecloud.com
+    ping.py www.google.com www.youtube.com
 
 Or re-run with a correct --hostsconf=PATH, whose content should be contains at least 2 elements:
     host_cdnid        XXX;
@@ -832,15 +832,15 @@ def main():
                       help="using long connection on upload, doesn't support http")
     parser.add_option("--fbs-domain",
                       type=str,
-                      default='http://greenping.cdn.lecloud.com/fbs/get/iplist',
+                      default='http://127.0.0.1/get/iplist',
                       help="domain to fetch target hosts")
     parser.add_option("--hostsconf",
                       type=str,
-                      default='/usr/local/etc/hosts.conf',
+                      default='hosts.conf',
                       help="configure file to load cdnid and diskid")
     parser.add_option("--iplist-file",
                       type=str,
-                      default='/var/tmp/ping_iplist',
+                      default='ping_iplist',
                       help="file to save ip list that fetched from FBS")
     parser.add_option("--iplist-expire",
                       type=int,
